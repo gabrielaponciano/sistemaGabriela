@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+    <ion-title>
+      Cadastro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div align="center"><p><b>Faça seu cadastro aqui
+    <p> <ion-avatar slot="start">
+  <img src="https://www.kindpng.com/picc/m/137-1379789_open-bible-free-icons-add-new-contact-icon.png">
+  </ion-avatar>
+</p>
+  </b></p>
+    </div>
+
+  <ion-card>
+
+    <div align="center">
+      <h6><b>Informe seu gênero</b></h6>
+      </div>
+
+    <ion-toolbar>
+      <ion-segment value="all">
+        <ion-segment-button value="all">
+          Feminino
+        </ion-segment-button>
+        <ion-segment-button value="favorites">
+          Masculino
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+
+
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input clearInput [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">CPF</ion-label>
+      <ion-input clearInput [(ngModel)]="cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data de nascimento</ion-label>
+      <ion-input clearInput [(ngModel)]="data"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Celular</ion-label>
+      <ion-input clearInput [(ngModel)]="celular"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input clearInput [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input clearInput [(ngModel)]="senha"
+      type="password" value="123456789" id="senha"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Confirmar Senha</ion-label>
+      <ion-input clearInput [(ngModel)]="confirmarsenha"
+      type="password" value="123456789" id="senha"></ion-input>
+    </ion-item>
+
+    </ion-card>
+
+    <div align="center">
+      <ion-button size="small"color="medium" (click)="apagar()">Limpar</ion-button>
+      <ion-button size="small" color="success" (click)="salvar()">Salvar</ion-button>
+    </div>
+
+    <div align="center">
+    <h6><b>{{mensagem}}</b></h6>
+    </div>
+
+    <div align="center">
+    <ion-button color="medium" size="small" routerLink="/home"> Voltar </ion-button>
+    </div>
+
+</ion-content>
